@@ -8,7 +8,6 @@ import DotGrid from './DotGrid';
 import AestheticsCountdown from './AestheticsCountdown';
 import VariableProximity from './VariableProximity';
 import FadeContent from './FadeContent';
-import ScrollReveal from './ScrollReveal';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -98,13 +97,11 @@ const HeroSection = () => {
         </h2>
         
         {/* Description */}
-        <ScrollReveal>
-          <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto text-white/80 leading-relaxed">
-            CEM's internal selection for the nationwide innovation marathon. Ideate, build 
-            and collaborate to secure your spot. Form diverse teams, showcase creativity 
-            and solve real-world challenges.
-          </p>
-        </ScrollReveal>
+        <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto text-white/80 leading-relaxed">
+          CEM's internal selection for the nationwide innovation marathon. Ideate, build 
+          and collaborate to secure your spot. Form diverse teams, showcase creativity 
+          and solve real-world challenges.
+        </p>
 
         {/* Partner Logos */}
         <div className="flex justify-center items-center gap-8 mb-8 flex-wrap">
@@ -139,93 +136,87 @@ const HeroSection = () => {
             Begin Registration →
           </Button>
         )}
-        <ScrollReveal>
-          <div className="mt-16 text-left max-w-4xl mx-auto space-y-6">
-            <p className="text-base md:text-lg leading-relaxed">
-              <span className="font-bold text-blue-400">What is the Smart India Hackathon (SIH)?</span><br />
-              Spearheaded by the Ministry of Education’s Innovation Cell, SIH is the world's largest open innovation model. It's a nationwide initiative where students like you tackle pressing challenges faced by government ministries, PSUs, and top industries. Whether your passion is software or hardware, SIH provides a platform to build innovative solutions that can make a real-world impact.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed">
-              <span className="font-bold text-blue-400">Why Should You Participate? Top Benefits for CE Muttathara Students</span><br />
-              Participating in SIH is more than just a competition; it’s a transformative experience that can shape your future. Here’s how you benefit:
-            </p>
+        <div className="mt-16 text-left max-w-4xl mx-auto space-y-6">
+          <p className="text-base md:text-lg leading-relaxed">
+            <span className="font-bold text-blue-400">What is the Smart India Hackathon (SIH)?</span><br />
+            Spearheaded by the Ministry of Education’s Innovation Cell, SIH is the world's largest open innovation model. It's a nationwide initiative where students like you tackle pressing challenges faced by government ministries, PSUs, and top industries. Whether your passion is software or hardware, SIH provides a platform to build innovative solutions that can make a real-world impact.
+          </p>
+          <p className="text-base md:text-lg leading-relaxed">
+            <span className="font-bold text-blue-400">Why Should You Participate? Top Benefits for CE Muttathara Students</span><br />
+            Participating in SIH is more than just a competition; it’s a transformative experience that can shape your future. Here’s how you benefit:
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-6 mt-10"> {/* Changed to flex column, centered items */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"> {/* First row: 3 cards */}
+            {/* Card 1 */}
+            <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
+              <CardHeader>
+                <CardTitle>Solve Real-World Problems for Top Organizations</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Imagine developing solutions for organizations like ISRO, the Ministry of Jal Shakti, or the Ministry of Ayush. SIH gives you the chance to work on actual problem statements, from enhancing moon images to building AI-powered yoga mats and monitoring water quality in the Ganga.</p>
+              </CardContent>
+            </Card>
+
+            {/* Card 2 */}
+            <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
+              <CardHeader>
+                <CardTitle>Launch Your Career and Gain National Recognition</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Winning or even just participating in SIH is a massive boost to your resume. Top companies and government departments scout for talent at this event. Your solution could be directly adopted and funded by a ministry, fast-tracking your career before you even graduate.</p>
+              </CardContent>
+            </Card>
+
+            {/* Card 3 */}
+            <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
+              <CardHeader>
+                <CardTitle>Become an Entrepreneur</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Have a startup idea? SIH is the ultimate launchpad. Through initiatives like YUKTI (National Innovation Repository), winning ideas receive mentorship, funding, and incubation support. Over 100 startups have already been born from the SIH ecosystem. Your project could be next!</p>
+              </CardContent>
+            </Card>
           </div>
-        </ScrollReveal>
 
-        <ScrollReveal>
-          <div className="flex flex-col items-center gap-6 mt-10"> {/* Changed to flex column, centered items */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"> {/* First row: 3 cards */}
-              {/* Card 1 */}
-              <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
-                <CardHeader>
-                  <CardTitle>Solve Real-World Problems for Top Organizations</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Imagine developing solutions for organizations like ISRO, the Ministry of Jal Shakti, or the Ministry of Ayush. SIH gives you the chance to work on actual problem statements, from enhancing moon images to building AI-powered yoga mats and monitoring water quality in the Ganga.</p>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[calc(2*300px+24px)]"> {/* Second row: 2 cards, centered. Assuming card width around 300px for max-w calculation */}
+            {/* Card 4 */}
+            <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
+              <CardHeader>
+                <CardTitle>Develop Critical Skills Beyond the Classroom</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>SIH isn't just about coding. Through initiatives like the Design Week Celebration and IDE Bootcamps, you'll learn about product design, ergonomics, and business modeling. It’s a chance to develop a complete skill set from idea to market-ready product.</p>
+              </CardContent>
+            </Card>
 
-              {/* Card 2 */}
-              <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
-                <CardHeader>
-                  <CardTitle>Launch Your Career and Gain National Recognition</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Winning or even just participating in SIH is a massive boost to your resume. Top companies and government departments scout for talent at this event. Your solution could be directly adopted and funded by a ministry, fast-tracking your career before you even graduate.</p>
-                </CardContent>
-              </Card>
-
-              {/* Card 3 */}
-              <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
-                <CardHeader>
-                  <CardTitle>Become an Entrepreneur</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Have a startup idea? SIH is the ultimate launchpad. Through initiatives like YUKTI (National Innovation Repository), winning ideas receive mentorship, funding, and incubation support. Over 100 startups have already been born from the SIH ecosystem. Your project could be next!</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[calc(2*300px+24px)]"> {/* Second row: 2 cards, centered. Assuming card width around 300px for max-w calculation */}
-              {/* Card 4 */}
-              <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
-                <CardHeader>
-                  <CardTitle>Develop Critical Skills Beyond the Classroom</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>SIH isn't just about coding. Through initiatives like the Design Week Celebration and IDE Bootcamps, you'll learn about product design, ergonomics, and business modeling. It’s a chance to develop a complete skill set from idea to market-ready product.</p>
-                </CardContent>
-              </Card>
-
-              {/* Card 5 */}
-              <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
-                <CardHeader>
-                  <CardTitle>Win Exciting Prizes and Build a Powerful Network</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Compete for significant cash prizes and connect with a vast network of mentors, industry experts, and government officials. The connections you make here can be invaluable for your future career.</p>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Card 5 */}
+            <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
+              <CardHeader>
+                <CardTitle>Win Exciting Prizes and Build a Powerful Network</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Compete for significant cash prizes and connect with a vast network of mentors, industry experts, and government officials. The connections you make here can be invaluable for your future career.</p>
+              </CardContent>
+            </Card>
           </div>
-        </ScrollReveal>
+        </div>
 
-        <ScrollReveal>
-          <div className="mt-16 text-left max-w-4xl mx-auto space-y-6">
-            <p className="text-base md:text-lg leading-relaxed">
-              <span className="font-bold text-blue-400">SIH: A Movement of Innovation</span><br />
-              <span className="font-bold">Massive Scale:</span> Over 13.91 lakh students have been a part of the SIH journey.<br />
-              <span className="font-bold">Government Backing:</span> 40+ Central Ministries and various state governments actively participate and mentor teams.<br />
-              <span className="font-bold">Proven Impact:</span> Dozens of projects from past SIH editions have been successfully implemented by ministries like DRDO, DST, and ISRO, solving critical national challenges.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed">
-              <span className="font-bold text-blue-400">Get Ready to Make Your Mark!</span><br />
-              The College of Engineering Muttathara encourages all aspiring innovators to take up this challenge. Start forming your teams, brainstorming ideas, and prepare to represent our college at the next Smart India Hackathon.<br /><br />
-              This is your chance to learn, build, and contribute to a developed India.<br /><br />
-              Stay tuned for announcements about the next edition and start your innovation journey today!
-            </p>
-          </div>
-        </ScrollReveal>
+        <div className="mt-16 text-left max-w-4xl mx-auto space-y-6">
+          <p className="text-base md:text-lg leading-relaxed">
+            <span className="font-bold text-blue-400">SIH: A Movement of Innovation</span><br />
+            <span className="font-bold">Massive Scale:</span> Over 13.91 lakh students have been a part of the SIH journey.<br />
+            <span className="font-bold">Government Backing:</span> 40+ Central Ministries and various state governments actively participate and mentor teams.<br />
+            <span className="font-bold">Proven Impact:</span> Dozens of projects from past SIH editions have been successfully implemented by ministries like DRDO, DST, and ISRO, solving critical national challenges.
+          </p>
+          <p className="text-base md:text-lg leading-relaxed">
+            <span className="font-bold text-blue-400">Get Ready to Make Your Mark!</span><br />
+            The College of Engineering Muttathara encourages all aspiring innovators to take up this challenge. Start forming your teams, brainstorming ideas, and prepare to represent our college at the next Smart India Hackathon.<br /><br />
+            This is your chance to learn, build, and contribute to a developed India.<br /><br />
+            Stay tuned for announcements about the next edition and start your innovation journey today!
+          </p>
+        </div>
       </div>
     </section>
   );
