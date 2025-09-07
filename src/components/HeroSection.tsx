@@ -24,7 +24,7 @@ const HeroSection = () => {
         const { data, error } = await supabase
           .from("team_members")
           .select("team_id")
-          .eq("user_id", user.id)
+          .eq("member_email", user.email)
           .single();
 
         if (error) {

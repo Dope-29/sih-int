@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef, useEffect, useCallback, useMemo } from 'react';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { InertiaPlugin } from 'gsap/InertiaPlugin';
 
 import './DotGrid.css';
@@ -178,7 +178,10 @@ const DotGrid: React.FC<DotGridProps> = ({
   }, [proximity, baseColor, activeRgb, baseRgb, circlePath]);
 
   useEffect(() => {
-    buildGrid();
+    const timer = setTimeout(() => {
+      buildGrid();
+    }, 100); // Delay of 100ms to allow layout to settle
+
     let ro: ResizeObserver | null = null;
     if ('ResizeObserver' in window) {
       ro = new ResizeObserver(buildGrid);
@@ -187,6 +190,7 @@ const DotGrid: React.FC<DotGridProps> = ({
       (window as Window).addEventListener('resize', buildGrid);
     }
     return () => {
+      clearTimeout(timer);
       if (ro) ro.disconnect();
       else window.removeEventListener('resize', buildGrid);
     };

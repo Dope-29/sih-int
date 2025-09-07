@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, ReactNode, RefObject } from 'react';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -49,7 +48,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
     });
 
     return () => {
-      const triggers = ScrollTrigger.getTweensOf(el);
+      const triggers = gsap.getTweensOf(el);
       triggers.forEach(trigger => trigger.kill());
     };
   }, [scrollContainerRef, enableBlur, baseRotation, baseOpacity, blurStrength]);
