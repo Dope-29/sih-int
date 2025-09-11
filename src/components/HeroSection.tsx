@@ -62,16 +62,16 @@ const HeroSection = () => {
         {/* Official Logos */}
         <div className="flex justify-center items-center gap-16 mb-8 flex-wrap">
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <img src="/logos/ministry-of-education.png" alt="Ministry of Education" className="h-28" />
+            <img src="/logos/ministry-of-education.png" alt="Ministry of Education" className="h-16 md:h-28" />
           </FadeContent>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <img src="/logos/aicte.png" alt="AICTE" className="h-28" />
+            <img src="/logos/aicte.png" alt="AICTE" className="h-16 md:h-28" />
           </FadeContent>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <img src="/logos/moes-innovation-cell.png" alt="MoE's Innovation Cell" className="h-28" />
+            <img src="/logos/moes-innovation-cell.png" alt="MoE's Innovation Cell" className="h-16 md:h-28" />
           </FadeContent>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <img src="/logos/smart-india-hackathon-2025.png" alt="Smart India Hackathon 2025" className="h-28" />
+            <img src="/logos/smart-india-hackathon-2025.png" alt="Smart India Hackathon 2025" className="h-16 md:h-28" />
           </FadeContent>
         </div>
 
@@ -107,10 +107,10 @@ const HeroSection = () => {
         {/* Partner Logos */}
         <div className="flex justify-center items-center gap-8 mb-8 flex-wrap">
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <img src="/logos/iedc-ignite.png" alt="IEDC Ignite" className="h-36" />
+            <img src="/logos/iedc-ignite.png" alt="IEDC Ignite" className="h-20 md:h-36" />
           </FadeContent>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <img src="/logos/mulearn.png" alt="μLearn" className="h-36" />
+            <img src="/logos/mulearn.png" alt="μLearn" className="h-20 md:h-36" />
           </FadeContent>
         </div>
 

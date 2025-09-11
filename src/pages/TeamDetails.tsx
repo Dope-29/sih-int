@@ -88,7 +88,7 @@ export default function TeamDetails() {
   }, [user?.email]);
 
   // Hardcoded hackathon details
-  const registrationEndDate = new Date("2025-09-15T00:00:00");
+  const registrationEndDate = new Date("2025-09-19T00:00:00");
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
