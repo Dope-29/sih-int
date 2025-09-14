@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { useEffect, useState } from "react";
@@ -225,6 +226,22 @@ export default function TeamDetails() {
                 <p className="text-sm text-white">
                   <span className="font-semibold text-white">Important:</span> Your team must include at least one female participant to be eligible for the hackathon.
                 </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-lg">Join Our WhatsApp Community</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-blue-400 mb-4">
+                  Stay updated with announcements, networking opportunities and get real SIH 2025 updates!
+                </p>
+                <Button
+                  className="bg-white/10 text-white hover:bg-white/20"
+                  onClick={() => window.open('https://chat.whatsapp.com/Dg9SQ4K0uBPF1I3r1Cz76E', '_blank')}
+                >
+                  Join WhatsApp Group
+                </Button>
               </CardContent>
             </Card>
           </div>
