@@ -24,7 +24,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/signin" element={<SignIn />} />
+            <Route path="/sign-in" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<Navigate to="/team-details" replace />} />
