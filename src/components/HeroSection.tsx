@@ -129,14 +129,29 @@ const HeroSection = () => {
             View Team Details →
           </Button>
         ) : (
-          <Button 
-            onClick={() => navigate('/signin')}
-            size="lg"
-            className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-full shadow-lg"
-          >
-            Begin Registration →
-          </Button>
+          <>
+            <div className="bg-gray-400 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg">
+              Registration Closed
+            </div>
+            <div className="mt-4">
+              <Button 
+                onClick={() => navigate('/sign-in')}
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-full shadow-lg"
+              >
+                Login to View Team Details
+              </Button>
+            </div>
+          </>
         )}
+        <div className="mt-4">
+          <Card className="p-5 bg-black bg-opacity-70 text-white border-2 border-blue-500 shadow-blue-500/50 shadow-lg">
+              <CardContent>
+                <p>For more details call 9526643146</p>
+              </CardContent>
+            </Card>
+        </div>
+
         <div className="mt-16 text-left max-w-4xl mx-auto space-y-6">
           <p className="text-base md:text-lg leading-relaxed">
             <span className="font-bold text-blue-400">What is the Smart India Hackathon (SIH)?</span><br />

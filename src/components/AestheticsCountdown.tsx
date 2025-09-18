@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const AestheticsCountdown = () => {
   // Hardcoded hackathon details (can be made dynamic later if needed)
-  const registrationEndDate = new Date("2025-09-19T00:00:00");
+  const registrationEndDate = new Date("2025-09-19T10:00:00");
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const AestheticsCountdown = () => {
       // Stop countdown if time is up
       if (difference < 0) {
         clearInterval(interval);
-        setTimeLeft("Registration Closed!");
+        setTimeLeft("Hackathon Started!");
       }
     }, 1000);
 
@@ -38,7 +38,7 @@ const AestheticsCountdown = () => {
       {/* Content - Centered Card */}
       <div className="flex items-center justify-center"> {/* Removed relative z-10 and h-full */}
         <div className="p-10 rounded-lg border border-blue-500 bg-transparent text-center">
-          <h2 className="text-2xl font-bold mb-4">Time Left for Registration</h2>
+          <h2 className="text-2xl font-bold mb-4">Time left till Hackathon</h2>
           <p className="text-4xl font-mono font-bold">{timeLeft}</p>
         </div>
       </div>

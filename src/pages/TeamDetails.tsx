@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { useEffect, useState } from "react";
 import DotGrid from '@/components/DotGrid';
-
+import AestheticsCountdown from '@/components/AestheticsCountdown';
 
 type Team = {
   team_name: string;
@@ -87,26 +87,6 @@ export default function TeamDetails() {
 
     fetchTeamDetails();
   }, [user?.email]);
-
-  // Hardcoded hackathon details
-  const registrationEndDate = new Date("2025-09-19T00:00:00");
-  const [timeLeft, setTimeLeft] = useState("");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const difference = registrationEndDate.getTime() - now.getTime();
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((difference / 1000 / 60) % 60);
-      const seconds = Math.floor((difference / 1000) % 60);
-
-      setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   if (loading) {
     return (
@@ -205,10 +185,7 @@ export default function TeamDetails() {
                     </p>
                   )}
                 </div>
-                <div>
-                  <h3 className="font-bold">Registration Ends In</h3>
-                  <p className="text-lg font-mono">{timeLeft}</p>
-                </div>
+                <AestheticsCountdown />
                 <div>
                   <h3 className="font-bold">Hackathon</h3>
                   <p>Smart India Hackathon 2025</p>
